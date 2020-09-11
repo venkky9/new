@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: paulczar/petclinic
-  tag: 2.1.0.BUILD-SNAPSHOT
+  repository: madavi/newspring
+  tag: 1
   pullPolicy: IfNotPresent
 
 nameOverride: ""
@@ -101,7 +101,7 @@ service:
 
   ## Service type can be set to ClusterIP, NodePort or LoadBalancer.
   ##
-  type: ClusterIP
+  type: NodePort
 
   ## Service annotations
   ##
