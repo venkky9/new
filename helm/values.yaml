@@ -131,8 +131,8 @@ resources:
   #   cpu: 500m
   #   memory: 1Gi
   requests:
-    cpu: 300m
-    memory: 512Mi
+    cpu: 800m
+    memory: 1024Mi
 
 ## Enable persistence using Persistent Volume Claims
 ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
@@ -166,11 +166,9 @@ persistence:
 ## Service parameters
 ##
 service:
-  ## Service type
-  ##
+  Service type
   type: LoadBalancer
-  ## HTTP port
-  ##
+  HTTP port
   port: 80
   ## Specify the nodePort(s) value(s) for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
