@@ -13,8 +13,8 @@
 ##
 image:
   registry: docker.io
-  repository: madavi/newtomcat1
-  tag: 3
+  repository: madavi/tom-war
+  tag: latest
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
@@ -81,8 +81,8 @@ tomcatUsername: user
 ##
 # tomcatPassword:
 
-## Expose management services
-## ref: https://github.com/bitnami/charts/tree/master/bitnami/tomcat#configuration
+Expose management services
+ref: https://github.com/bitnami/charts/tree/master/bitnami/tomcat#configuration
 ##
 tomcatAllowRemoteManagement: 0
 
@@ -161,14 +161,14 @@ persistence:
   size: 8Gi
   ## Name of an existing PVC
   ##
-  existingClaim: aws-pvc
+  existingClaim: volume
 
 ## Service parameters
 ##
 service:
   ## Service type
   ##
-  type: NodePort
+  type: LoadBalancer
   ## HTTP port
   ##
   port: 80
@@ -179,10 +179,10 @@ service:
   ## Set the LoadBalancer service type to internal only.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
   ##
-  # loadBalancerIP:
+  loadBalancerIP:
   ## Provide any additional annotations which may be required. This can be used to
   ## set the LoadBalancer service type to internal only.
-  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
+  ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
   ##
   annotations: {}
   ## Enable client source IP preservation
