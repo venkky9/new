@@ -166,9 +166,9 @@ persistence:
 ## Service parameters
 ##
 service:
-  Service type
+  Service type:
   type: LoadBalancer
-  HTTP port
+  HTTP port: 
   port: 80
   ## Specify the nodePort(s) value(s) for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
